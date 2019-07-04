@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var year = parseInt(prompt("nhập vào năm sinh: "));
+        function tinhTuoi(year) {
+            if (year<2019){
+                var tuoi = 2019 - year ;
+            } else {
+                alert("nhập đúng số tuổi !");
+            }
+            return tuoi ;
+        }
+        document.write("tuổi của bạn là: " +tinhTuoi(year));
+    </script>
+
+</body>
+</html>
