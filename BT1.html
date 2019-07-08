@@ -2,38 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tìm số Nguyên Tố</title>
 </head>
 <body>
-<form>
-    Enter a number :
-    <input type="text" id="number"/>
-    <button type="button" id="show" onclick="checkP()">Show</button>
-    <p id="outPut"></p>
-</form>
-<script>
-    function checkP(){
-        var number =     parseInt(document.getElementById("number").value);
-        console.log(number);
-        var n = 2 ;
-        var p = "";
-        while(n<number){
-            if(isSNT(n) === 1){
-                p += n+" ";
+    <form>
+        Enter a number :
+        <input type="text" id="txtNumber"/>
+        <button type="button" onclick="checkPrime()">Show</button>
+        <p id="outPut"></p>
+    </form>
+    <script>
+        function checkPrime(){
+            var number = parseInt(document.getElementById("txtNumber").value);
+            console.log(number);
+            var numberStart = 2 ;
+            var prime = "";
+            while(numberStart<number){
+                if(isPrime(numberStart) === 1){
+                    prime += numberStart+" ";
+                }
+                numberStart++;
             }
-            n++;
+            document.getElementById("outPut").innerHTML = "Các số nguyên tố là: " +prime;
         }
-        document.getElementById("outPut").innerHTML = "các số nguyên tố là: " +p;
-
-    }
-    function isSNT(n) {
-        for (i=2;i<n;i++){
-            if (n%i==0)
-                return 0;
+        function isPrime(n) {
+            for (let i=2;i<n;i++){
+                if (n%i==0)
+                    return 0;
+            }
+            return 1;
         }
-        return 1;
-    }
-</script>
+    </script>
 
 </body>
 </html>

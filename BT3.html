@@ -7,15 +7,17 @@
 <body>
     <script>
         var year = parseInt(prompt("nhập vào năm sinh: "));
+        var currnt = new Date().getFullYear();
         function tinhTuoi(year) {
-            if (year<2019){
-                var tuoi = 2019 - year ;
+            if (year< currnt){
+                var tuoi = currnt - year ;
             } else {
                 alert("nhập đúng số tuổi !");
             }
             return tuoi ;
         }
-        document.write("tuổi của bạn là: " +tinhTuoi(year));
+        var ketQua = tinhTuoi(year)
+        document.write("tuổi của bạn là: " +ketQua);
     </script>
 
 </body>

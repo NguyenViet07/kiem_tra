@@ -10,13 +10,16 @@
         function sumOdd(array) {
             var sum = 0;
             for (var i = 0; i < array.length; i++){
-                if (array[i] % 2 != 0){
+                let odd = array[i] % 2
+                if (odd != 0){
                     sum += array[i];
                 }
             }
             return sum;
         }
-        document.write("Tổng số lẻ là: " + sumOdd(array));
+        let result = sumOdd(array);
+
+        document.write("Tổng số lẻ là: " + result);
 
     </script>
 
